@@ -28,7 +28,7 @@ const wss = new WebSocket.Server({ server });
 
 // Armazenamento em memória
 const messages = [];
-const clients = new Map(); // Agora usando Map para armazenar informações do usuário
+const clients = new Map();
 
 // Conexões WebSocket
 wss.on('connection', (ws) => {
