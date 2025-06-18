@@ -15,7 +15,7 @@ const fileInput = document.getElementById('fileInput');
 const userStatus = document.getElementById('userStatus');
 const appContainer = document.querySelector('.app-container');
 
-// Aplicar desfoque inicial
+// Aplicacao desfoque inicial
 appContainer.classList.add('blur-background');
 
 // Login
@@ -64,7 +64,7 @@ function handleLogout() {
 
 // Conexão WebSocket
 function connectWebSocket() {
-  // NOVO (funciona local e online):
+
 const wsUrl = window.location.host.includes('onrender.com') 
   ? `wss://${window.location.host}`  // Para deploy no Render
   : `ws://${window.location.hostname}:3000`; // Para localhost
