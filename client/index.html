@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iChat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💬</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <button id="logoutButton" class="logout-button" title="Sair do chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 17l5-5-5-5M19.8 12H9M14 5H7a2 2 0 00-2 2v10a2 2 0 002 2h7"/>
+        </svg>
+      </button>
+      <h1>iChat</h1>
+      <div id="userStatus"></div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2>Bem-vindo ao iChat</h2>
+        <input type="text" id="usernameInput" placeholder="Digite seu nome" autofocus>
+        <button id="loginButton">Entrar</button>
+      </div>
+    </div>
+
+    <main class="chat-container" style="display: none;">
+      <div id="chat" class="chat-messages"></div>
+      
+      <div class="input-area">
+        <form id="messageForm" class="message-form">
+          <input type="text" id="messageInput" placeholder="Digite sua mensagem" autocomplete="off">
+          <button type="submit" class="send-button">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+        
+        <form id="fileForm" class="file-form">
+          <label for="fileInput" class="file-label">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          </label>
+          <input type="file" id="fileInput">
+          <button type="submit" class="file-button">Enviar Arquivo</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
